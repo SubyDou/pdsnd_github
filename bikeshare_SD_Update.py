@@ -32,6 +32,7 @@ def get_filters():
 
 
     # TO DO: get user input for month (all, january, february, ... , june)
+    ### user is able to input month in the lower cases.
     months = ['January', 'February', 'March', 'April', 'May', 'June']
     while True:
         user_month=input('Which month do you like to explore: January, February, March, April, May, June, or All?')

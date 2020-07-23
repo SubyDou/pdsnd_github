@@ -20,10 +20,9 @@ def get_filters():
 
     cities=['chicago','new york city','washington']
 
-<<<<<<< HEAD
+
     ### user is able to input city in the lower cases.
-=======
->>>>>>> refactoring
+
     while True:
         user_city=input('Would you like to see data for Chicago, New York City, or Washington?')
         user_city=user_city.lower()
@@ -101,11 +100,9 @@ def load_data(city, month, day):
         df = df[df['month'] ==month]
 
     # filter by day of week if applicable
-<<<<<<< HEAD
-    if day != 'all'and day != 'All':
-=======
+
     if day != 'All':
->>>>>>> refactoring
+
 
         df = df[df['day_of_week']==day.title()]
 

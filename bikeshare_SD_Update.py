@@ -96,7 +96,7 @@ def load_data(city, month, day):
         df = df[df['month'] ==month]
 
     # filter by day of week if applicable
-    if day != 'all'and day != 'All':
+    if day != 'All':
 
         df = df[df['day_of_week']==day.title()]
 

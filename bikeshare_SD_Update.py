@@ -17,9 +17,10 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    
+
     cities=['chicago','new york city','washington']
-    
+
+    ### user is able to input city in the lower cases.
     while True:
         user_city=input('Would you like to see data for Chicago, New York City, or Washington?')
         user_city=user_city.lower()
@@ -28,7 +29,7 @@ def get_filters():
             break
         else:
             print('Opps!Somthing is wrong.Please choose only one city from Chicago, New York City, or Washington.')
-       
+
 
     # TO DO: get user input for month (all, january, february, ... , june)
     months = ['January', 'February', 'March', 'April', 'May', 'June']
@@ -75,7 +76,7 @@ def load_data(city, month, day):
     CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
-    
+
     df = pd.read_csv(CITY_DATA[city])
 
     # convert the Start Time column to datetime
@@ -91,13 +92,13 @@ def load_data(city, month, day):
         # use the index of the months list to get the corresponding int
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month.lower())+1
-    
+
         # filter by month to create the new dataframe
         df = df[df['month'] ==month]
 
     # filter by day of week if applicable
     if day != 'all'and day != 'All':
-    
+
         df = df[df['day_of_week']==day.title()]
 
     return df
@@ -199,13 +200,13 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df,city)
-        
-        
-        
+
+
+
         ## if the user input is yes, then print data
         ## it shows the original data 10 entries every time until user input no.
         data = input('Would you like to see your original data \n')
-        
+
         if data.lower()=='yes':
             df.drop(columns = ['station_combination', 'month', 'day_of_week','hour'], inplace = True)
             i = 10
@@ -228,4 +229,3 @@ def main():
 
 if __name__ == "__main__":
  	main()
-   

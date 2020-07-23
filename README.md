@@ -1,15 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+The project is created on July 23, 2020.
 
 ### Project Title
-Replace the Project Title
+Bike share data exploration
 
 ### Description
-Describe what your project is about and what it does
+The project is to provide bike share statistics in three cities in an interactive manner
 
 ### Files used
-Include the files used
+The files used are chicago.csv, new_york_city.csv, washington.csv, all of them are from Udacity.
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+The python code used the pandas and time.
